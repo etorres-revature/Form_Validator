@@ -25,33 +25,24 @@ function isValidEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 
+//check required fields
+function checkRequired(inputArr) {
+  inputArr.forEach(function (inputItem) {
+    if (inputItem.value === "") {
+      showError(inputItem, `${getFieldName(inputItem)} is a required field.`);
+    } else {
+      showSuccess(inputItem);
+    }
+  });
+}
+
+//get fieldname
+function getFieldName(input) {
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
 //event listener
-formEl.addEventListener("click", function (event) {
+formEl.addEventListener("submit", function (event) {
   event.preventDefault();
-
-  if (usernameEl.value === "") {
-    showError(username, "Username is required");
-  } else {
-    showSuccess(username);
-  }
-
-  if (emailEl.value === "") {
-    showError(email, "E-mail is required");
-  } else if (!isValidEmail(emailEl.value)) {
-    showError(email, "Email is not valid");
-  } else {
-    showSuccess(email);
-  }
-
-  if (passwordEl.value === "") {
-    showError(password, "Password is required");
-  } else {
-    showSuccess(password);
-  }
-
-  if (password2El.value === "") {
-    showError(password2, "Confirm Password is required");
-  } else {
-    showSuccess(password2);
-  }
+  checkRequired([username, email, password, password2]);
 });
