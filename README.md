@@ -4,15 +4,15 @@
 
  If you attempt to input the form without any information, they the input border becomes red and an error message is displayed.
 
- ![FORM VALIDATOR](./images/screenshot/form-validator.png)
+ ![FORM VALIDATOR](./images/screenshots/form-validator.png)
 
  Additional validations exist on the e-mail and confirm passwords.  The program checks to make sure that the e-mail follows the correct format.  Passwords must be at least six character long.  And, the confirm password must match the password entry.
 
- ![FORM VALIDATOR e-mail password](./images/screenshot/form-validator-email-password.png)
+ ![FORM VALIDATOR e-mail password](./images/screenshots/form-validator-email-password.png)
 
  Once all entries have been validated, the form is ready to submit.
 
- ![FORM VALIDATOR form validated](.images/screenshot/form-validator-validated.png)
+ ![FORM VALIDATOR form validated](./images/screenshots/form-validator-validated.png)
 
  Please enjoy the [Form Validator](https://etorres-revature.github.io/Form_Validator/).  E-mail me with any feature update suggestions.
 
